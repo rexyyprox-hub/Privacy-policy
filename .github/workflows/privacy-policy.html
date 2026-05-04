@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy – Quizapp</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Serif+4:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg: #0f1117;
+      --surface: #181c27;
+      --border: #252a38;
+      --accent: #4f8ef7;
+      --accent2: #a78bfa;
+      --text: #e8eaf0;
+      --muted: #8892a4;
+      --heading: #ffffff;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-weight: 300;
+      line-height: 1.85;
+      min-height: 100vh;
+    }
+
+    /* Background decoration */
+    body::before {
+      content: '';
+      position: fixed;
+      top: -200px; right: -200px;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(79,142,247,0.08) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    body::after {
+      content: '';
+      position: fixed;
+      bottom: -200px; left: -100px;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(167,139,250,0.07) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    header {
+      position: relative;
+      z-index: 1;
+      border-bottom: 1px solid var(--border);
+      padding: 3rem 2rem 2.5rem;
+      text-align: center;
+      background: linear-gradient(180deg, rgba(79,142,247,0.05) 0%, transparent 100%);
+    }
+    header .badge {
+      display: inline-block;
+      background: rgba(79,142,247,0.12);
+      border: 1px solid rgba(79,142,247,0.3);
+      color: var(--accent);
+      font-family: 'Source Serif 4', serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 0.3em 1em;
+      border-radius: 2em;
+      margin-bottom: 1.2rem;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      color: var(--heading);
+      letter-spacing: -0.01em;
+      margin-bottom: 0.5rem;
+    }
+    header h1 span { color: var(--accent); }
+    header p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 3rem 2rem 5rem;
+    }
+
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: 8px;
+      padding: 1.5rem 2rem;
+      margin-bottom: 3rem;
+    }
+    .toc h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      color: var(--accent);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    .toc ol {
+      padding-left: 1.2rem;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+    .toc ol li { margin-bottom: 0.4rem; }
+    .toc a {
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .toc a:hover { color: var(--accent); }
+
+    section {
+      margin-bottom: 2.8rem;
+      padding-bottom: 2.8rem;
+      border-bottom: 1px solid var(--border);
+    }
+    section:last-of-type { border-bottom: none; }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: var(--heading);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+    h2 .num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2rem; height: 2rem;
+      background: rgba(79,142,247,0.12);
+      border: 1px solid rgba(79,142,247,0.25);
+      border-radius: 50%;
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-family: 'Source Serif 4', serif;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+
+    p { margin-bottom: 1rem; font-size: 1rem; }
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      padding-left: 1.4rem;
+      margin-bottom: 1rem;
+    }
+    ul li {
+      margin-bottom: 0.5rem;
+      color: var(--text);
+    }
+    ul li::marker { color: var(--accent); }
+
+    .highlight-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent2);
+      border-radius: 6px;
+      padding: 1.2rem 1.5rem;
+      margin: 1.2rem 0;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .contact-card {
+      background: linear-gradient(135deg, rgba(79,142,247,0.08), rgba(167,139,250,0.08));
+      border: 1px solid rgba(79,142,247,0.2);
+      border-radius: 10px;
+      padding: 1.8rem 2rem;
+      margin-top: 1rem;
+    }
+    .contact-card p { margin: 0.3rem 0; font-size: 0.95rem; }
+    .contact-card strong { color: var(--accent); }
+
+    footer {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    @media (max-width: 600px) {
+      .container { padding: 2rem 1.2rem 4rem; }
+      header { padding: 2rem 1.2rem 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="badge">Legal Document</div>
+  <h1><span>Quizapp</span> Privacy Policy</h1>
+  <p>Effective Date: May 4, 2026 &nbsp;·&nbsp; Last Updated: May 4, 2026</p>
+</header>
+
+<div class="container">
+
+  <div class="toc">
+    <h3>Table of Contents</h3>
+    <ol>
+      <li><a href="#s1">Information We Collect</a></li>
+      <li><a href="#s2">How We Use Your Information</a></li>
+      <li><a href="#s3">Data Sharing</a></li>
+      <li><a href="#s4">Data Storage &amp; Security</a></li>
+      <li><a href="#s5">Offline Use</a></li>
+      <li><a href="#s6">Children's Privacy</a></li>
+      <li><a href="#s7">Your Rights</a></li>
+      <li><a href="#s8">Changes to This Policy</a></li>
+      <li><a href="#s9">Contact Us</a></li>
+    </ol>
+  </div>
+
+  <p>Welcome to <strong>Quizapp</strong>. This Privacy Policy explains how we handle information when you use our mobile application. By using Quizapp, you agree to the terms described here.</p>
+
+  <div class="highlight-box">
+    ✅ <strong>Short version:</strong> Quizapp is an offline quiz application. We do not collect personal data, we do not send your data to any server, and we do not share anything with third parties.
+  </div>
+
+  <!-- 1 -->
+  <section id="s1">
+    <h2><span class="num">1</span> Information We Collect</h2>
+    <p>Quizapp is designed to function entirely <strong>offline</strong>. We collect minimal to no personal information. Specifically:</p>
+    <ul>
+      <li>We do <strong>not</strong> require you to create an account or log in.</li>
+      <li>We do <strong>not</strong> collect your name, email address, phone number, or any personally identifiable information.</li>
+      <li>We do <strong>not</strong> use analytics tools or tracking SDKs.</li>
+      <li>Quiz progress and scores may be stored <strong>locally on your device only</strong>.</li>
+    </ul>
+  </section>
+
+  <!-- 2 -->
+  <section id="s2">
+    <h2><span class="num">2</span> How We Use Your Information</h2>
+    <p>Since we do not collect personal data, there is no personal information to use. Any data stored locally (such as quiz scores or progress) is used solely to:</p>
+    <ul>
+      <li>Display your quiz history and results within the app.</li>
+      <li>Improve your experience by remembering where you left off.</li>
+    </ul>
+    <p>This data never leaves your device.</p>
+  </section>
+
+  <!-- 3 -->
+  <section id="s3">
+    <h2><span class="num">3</span> Data Sharing</h2>
+    <p>We do <strong>not</strong> sell, trade, rent, or share any user data with third parties. There are no advertisements, no advertising networks, and no third-party SDKs embedded in the app that collect data.</p>
+  </section>
+
+  <!-- 4 -->
+  <section id="s4">
+    <h2><span class="num">4</span> Data Storage &amp; Security</h2>
+    <p>All app data is stored <strong>locally on your device</strong> using Android's built-in storage mechanisms. We implement reasonable security measures within the app. Since no data is transmitted to external servers, the risk of a data breach from our end is eliminated.</p>
+    <p>You can delete all app data at any time by uninstalling the app or clearing app data in your device settings.</p>
+  </section>
+
+  <!-- 5 -->
+  <section id="s5">
+    <h2><span class="num">5</span> Offline Use</h2>
+    <p>Quizapp is built for <strong>offline viewers</strong>. The app does not require an internet connection to function. We do not make any network requests during normal app usage.</p>
+  </section>
+
+  <!-- 6 -->
+  <section id="s6">
+    <h2><span class="num">6</span> Children's Privacy</h2>
+    <p>Quizapp does not knowingly collect any personal information from children under the age of 13. Since the app does not collect any data from any user, it is safe for all age groups. If you are a parent or guardian and have concerns, please contact us.</p>
+  </section>
+
+  <!-- 7 -->
+  <section id="s7">
+    <h2><span class="num">7</span> Your Rights</h2>
+    <p>Since we do not collect or store your personal data on any server, there is no personal data to access, correct, or delete from our end. You can remove all locally stored data by:</p>
+    <ul>
+      <li>Going to <strong>Settings → Apps → Quizapp → Clear Data</strong> on your Android device.</li>
+      <li>Uninstalling the application.</li>
+    </ul>
+  </section>
+
+  <!-- 8 -->
+  <section id="s8">
+    <h2><span class="num">8</span> Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. Any changes will be reflected on this page with an updated effective date. We encourage you to review this page periodically. Continued use of the app after changes constitutes your acceptance of the updated policy.</p>
+  </section>
+
+  <!-- 9 -->
+  <section id="s9">
+    <h2><span class="num">9</span> Contact Us</h2>
+    <p>If you have any questions or concerns about this Privacy Policy, please contact us:</p>
+    <div class="contact-card">
+      <p><strong>App Name:</strong> Quizapp</p>
+      <p><strong>Email:</strong> ashwinsekar688@email.com</p>
+      <p><strong>Developer:</strong> Ashwin S</p>
+      <p><strong>Country:</strong> India</p>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <p>© 2026 Quizapp. All rights reserved.</p>
+  <p style="margin-top:0.4rem;">This privacy policy was last updated on May 4, 2026.</p>
+</footer>
+
+</body>
+</html>
